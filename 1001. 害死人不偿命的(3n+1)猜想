@@ -16,6 +16,7 @@
 输出样例：
 5
 */
+/*用到:字符的输出输出\循环*/
 #include <iostream>
 using namespace std;
 int main() 
