@@ -14,3 +14,33 @@
 输出样例：
 yi san wu
 */
+
+#include<iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  const char *pinyin[]={"ling","yi","er","san","si","wu","liu","qi","ba","jiu"};
+
+  char s[101];
+  int sum=0;
+  cin>>s;
+  for(int i=0;i<strlen(s);i++)
+  {
+    sum=sum+(s[i]-'0');
+  }
+  string ss=to_string(sum);
+  bool end;
+  for(int i=0;i<ss.size();i++)
+  {
+    if(i==ss.size()-1)
+    {
+      cout<<pinyin[ss[i]-'0']<<endl;
+    }else{
+    cout<<pinyin[ss[i]-'0'];
+    cout<<" ";
+    }
+  }
+  return 0;
+}
